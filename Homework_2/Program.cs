@@ -5,23 +5,25 @@
 int [] array = new int[10];
 int sum = 0;
 
-for (int i = 0; i <= 9; i++)
-
+for (int i = 0; i < array.Length; i++)
 {
-
-Random rnd = new Random(); 
-    
-int N = rnd.Next(10, 9999); 
-    
-array[i] = N;
-Console.WriteLine($"элементы {i%2!}");
-Console.WriteLine($"номер {N}");  
-    
-    if (i%2!=0)
-    {
-        sum += array[i]; 
-    }
-                       
+    Random rnd = new Random(); 
+  
+    array[i] = rnd.Next(99, 9999);
 }
 
+for (int i = 0; i < array.Length; i+=2)
+{   
+    sum += array[i];
+}
+Console.Write("[");
+
+for (int i = 0; i < array.Length; i++)
+{
+    Console.Write($"{array[i]}, \t");
+}
+Console.Write($"]\n");
+
 Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях = {sum}");
+
+

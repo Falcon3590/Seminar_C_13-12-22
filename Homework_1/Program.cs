@@ -20,7 +20,7 @@ array[i] = N;
  
     if (array[i] % 2 == 0)
     {
-        result += 1; 
+        result++; 
     }
                        
 }
