@@ -10,20 +10,20 @@ for(int i = 0; i < 10; i++){
     array[i] = rnd.Next(99, 9999);
 }
 
-double Maximum = array[0];
+double MaxNumber = array[0];
 
-double Minimum = array[0];
+double MinNumber = array[0];
 
 for(int i = 1; i < 10; i++){
     
-    if(array[i] > Maximum)
+    if(array[i] > MaxNumber)
     {
-        Maximum = array[i];
+        MaxNumber = array[i];
     }   
     
-    if(array[i] < Minimum)
+    if(array[i] < MinNumber)
     {
-        Minimum = array[i];
+        MinNumber = array[i];
     }   
     
 }
@@ -36,7 +36,7 @@ for (int i = 0; i < array.Length - 1; i++)
 }
 Console.Write($"{array[9]}]\n");
 
-Console.Write($"Разниа между максимальным {Maximum} и минимальным {Minimum} элементов массива = {Maximum - Minimum}");
+Console.Write($"Разниа между максимальным {MaxNumber} и минимальным {MinNumber} элементов массива = {MaxNumber - MinNumber}");
 
 
 
